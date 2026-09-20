@@ -24,7 +24,7 @@ def calibrar_posicoes():
 def enviar_para_vision_ai(image_bytes):
     import base64
     base64_image = base64.b64encode(image_bytes).decode('utf-8')
-    url = f"https://googleapis.com{API_KEY}"
+    url = f"https://googleapis.com/{API_KEY}"
     payload = {
         "requests": [{
             "image": {"content": base64_image},
@@ -85,3 +85,4 @@ if __name__ == "__main__":
     regiao, botao = calibrar_posicoes()
     time.sleep(2)
     capturar_e_resolver(regiao, botao, "Traffic light", 3, 3)
+    
