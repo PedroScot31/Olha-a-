@@ -10,10 +10,13 @@ pyautogui.FAILSAFE = True
 API_KEY = "SUA_CHAVE_DE_TEXTO_AQUI" 
 
 def calibrar_posicoes():
+    #aqui tu deixa o mouse parado no canto superior esquerdo
     time.sleep(3)
     x1, y1 = pyautogui.position()
+    #aqui no inferior direito
     time.sleep(3)
     x2, y2 = pyautogui.position()
+    #no meio do botão de enviar
     time.sleep(3)
     bx, by = pyautogui.position()
     return (x1, y1, x2 - x1, y2 - y1), (bx, by)
